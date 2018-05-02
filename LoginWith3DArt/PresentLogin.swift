@@ -29,6 +29,7 @@ class PresentLogin: NSObject, UIViewControllerAnimatedTransitioning {
         if self.presenting {
             loginViewController.background.alpha = 0.0
             loginViewController.loginContainerTop.constant = UIScreen.main.bounds.height
+//            loginViewController.scnView.alpha = 0.0
         }
         
         containerView.layoutIfNeeded()
@@ -38,6 +39,8 @@ class PresentLogin: NSObject, UIViewControllerAnimatedTransitioning {
             loginViewController.background.alpha = self.presenting ? 0.8 : 0.0
             loginViewController.loginContainerTop.constant = self.presenting ? 48 : UIScreen.main.bounds.height
             containerView.layoutIfNeeded()
+            
+//            loginViewController.scnView.alpha = self.presenting ? 1.0 : 0.0
         }
 
         animator.addCompletion { (finished) in

@@ -12,23 +12,15 @@ import SceneKit
 
 class MainViewController: UIViewController {
     
-    //Transition
     let presentLoginTransition = PresentLogin()
-    
-    //SceneKit Properties
     @IBOutlet weak var scnView: SCNView!
-    var carrotPlayer = SCNAnimationPlayer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // create a new scene
         let scene = SCNScene(named: "art.scnassets/carrot.scn")!
-        
-        // retrieve the carrot node
-        let carrot = scene.rootNode.childNode(withName: "carrot", recursively: true)!
-        carrotPlayer = carrot.animationPlayer(forKey: "keyframedAnimations2")!
-        
+    
         // set the scene to the view
         scnView.scene = scene
         
@@ -38,7 +30,6 @@ class MainViewController: UIViewController {
         
         // configure the view
         scnView.backgroundColor = UIColor.clear
-
     }
 
     override func didReceiveMemoryWarning() {
