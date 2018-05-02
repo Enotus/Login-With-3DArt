@@ -32,6 +32,9 @@ class OrangeButton: UIButton {
         layer.shadowOpacity = 1.0
         layer.shadowOffset = CGSize(width: 0, height: 4)
         layer.shadowRadius = 8.0
+        
+//        layer.borderWidth = 1
+//        layer.borderColor = UIColor.lightGray
     }
     
     override init(frame: CGRect) {

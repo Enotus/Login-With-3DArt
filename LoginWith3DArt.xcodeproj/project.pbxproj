@@ -16,6 +16,7 @@
 		71D85FBF2099D8BE00F7B847 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D85FBE2099D8BE00F7B847 /* MainViewController.swift */; };
 		71D85FC12099D8F300F7B847 /* PresentLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D85FC02099D8F300F7B847 /* PresentLogin.swift */; };
 		71D85FC32099EF4200F7B847 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 71D85FC22099EF4200F7B847 /* art.scnassets */; };
+		71D85FC52099FAAB00F7B847 /* LoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D85FC42099FAAB00F7B847 /* LoginForm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		71D85FBE2099D8BE00F7B847 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		71D85FC02099D8F300F7B847 /* PresentLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentLogin.swift; sourceTree = "<group>"; };
 		71D85FC22099EF4200F7B847 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		71D85FC42099FAAB00F7B847 /* LoginForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginForm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				71D85FC02099D8F300F7B847 /* PresentLogin.swift */,
 				71D85FA82099CE2F00F7B847 /* Main.storyboard */,
 				71D85FB62099D49F00F7B847 /* OrangeButton.swift */,
+				71D85FC42099FAAB00F7B847 /* LoginForm.swift */,
 				71D85FC22099EF4200F7B847 /* art.scnassets */,
 				71D85FAB2099CE3000F7B847 /* Assets.xcassets */,
 				71D85FAD2099CE3000F7B847 /* LaunchScreen.storyboard */,
@@ -149,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71D85FBD2099D88900F7B847 /* LoginViewController.swift in Sources */,
+				71D85FC52099FAAB00F7B847 /* LoginForm.swift in Sources */,
 				71D85FC12099D8F300F7B847 /* PresentLogin.swift in Sources */,
 				71D85FB72099D49F00F7B847 /* OrangeButton.swift in Sources */,
 				71D85FA52099CE2F00F7B847 /* AppDelegate.swift in Sources */,

@@ -8,16 +8,17 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
-
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: - Outlets
     @IBOutlet weak var loginContainer: UIView!
     @IBOutlet weak var loginContainerTop: NSLayoutConstraint!
     @IBOutlet weak var background: UIView!
+    @IBOutlet weak var emailTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        emailTextField.becomeFirstResponder()
     }
     
     func resetLoginPosition() {
@@ -46,9 +47,12 @@ class LoginViewController: UIViewController {
             }
             
         case .ended:
-            loginPosition > (UIScreen.main.bounds.height * 0.3) || velocity > 1400
-                ? dismiss(animated: true, completion: nil)
-                : resetLoginPosition()
+            if loginPosition > (UIScreen.main.bounds.height * 0.3) || velocity > 1400 {
+                emailTextField.resignFirstResponder()
+                dismiss(animated: true, completion: nil)
+            } else {
+                resetLoginPosition()
+            }
             
         default:
             break
