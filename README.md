@@ -3,4 +3,4 @@ Experiment with using 3D in UI for iOS Apps
 
 **Preview**
 
-![Preview](ScheduleScreenUI.gif)
+![Preview](Preview.gif)
