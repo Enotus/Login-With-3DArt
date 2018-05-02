@@ -1,24 +1,144 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="LoginWith3DArt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="WFR-V5-qas">
+                                <rect key="frame" x="24" y="274.5" width="327" height="118"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Uw-0w-Vhb" customClass="OrangeButton" customModule="LoginWith3DArt" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="327" height="64"/>
+                                        <color key="backgroundColor" red="1" green="0.56862745100000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="b7k-HU-zl3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Login">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="znX-Ru-JO9" kind="presentation" modalPresentationStyle="overFullScreen" id="NdS-2C-dja"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7jo-fR-u0p">
+                                        <rect key="frame" x="148.5" y="88" width="30" height="30"/>
+                                        <state key="normal" title="Skip"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="1Uw-0w-Vhb" secondAttribute="trailing" id="SgN-m6-j7z"/>
+                                    <constraint firstItem="1Uw-0w-Vhb" firstAttribute="leading" secondItem="WFR-V5-qas" secondAttribute="leading" id="Vhm-xk-9OV"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WFR-V5-qas" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="G3K-Ob-Fg6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WFR-V5-qas" secondAttribute="trailing" constant="24" id="Hp7-Yt-zGm"/>
+                            <constraint firstItem="WFR-V5-qas" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vQq-BC-lZa"/>
+                            <constraint firstItem="WFR-V5-qas" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="ygu-11-odI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="180" y="431"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="Pft-pv-8kf">
+            <objects>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="S0Q-zv-dQo">
+                    <connections>
+                        <action selector="dragginLogin:" destination="znX-Ru-JO9" id="1hK-6H-zkg"/>
+                    </connections>
+                </panGestureRecognizer>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NsZ-Je-USm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="znX-Ru-JO9" customClass="LoginViewController" customModule="LoginWith3DArt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pwO-Gs-Qod">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lDW-Qj-pge">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dtv-ba-nXN">
+                                <rect key="frame" x="0.0" y="68" width="375" height="1000"/>
+                                <subviews>
+                                    <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tta-Wz-8Cf">
+                                        <rect key="frame" x="155.5" y="12" width="64" height="4"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="4" id="7Wt-rm-Acb"/>
+                                            <constraint firstAttribute="width" constant="64" id="BpR-kC-u5K"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1000" id="RBW-g9-Fqx"/>
+                                    <constraint firstItem="tta-Wz-8Cf" firstAttribute="centerX" secondItem="dtv-ba-nXN" secondAttribute="centerX" id="Wcu-cR-RdE"/>
+                                    <constraint firstItem="tta-Wz-8Cf" firstAttribute="top" secondItem="dtv-ba-nXN" secondAttribute="top" constant="12" id="esV-Dl-fiG"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="S0Q-zv-dQo" appends="YES" id="nFN-qT-8s4"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dtv-ba-nXN" firstAttribute="top" secondItem="BGP-Fa-SEs" secondAttribute="top" constant="48" id="6Sm-xd-dAQ"/>
+                            <constraint firstItem="BGP-Fa-SEs" firstAttribute="trailing" secondItem="dtv-ba-nXN" secondAttribute="trailing" id="Hak-60-cF9"/>
+                            <constraint firstItem="dtv-ba-nXN" firstAttribute="leading" secondItem="BGP-Fa-SEs" secondAttribute="leading" id="P2J-vc-EQ9"/>
+                            <constraint firstAttribute="bottom" secondItem="lDW-Qj-pge" secondAttribute="bottom" id="R4t-fp-nSG"/>
+                            <constraint firstItem="lDW-Qj-pge" firstAttribute="top" secondItem="pwO-Gs-Qod" secondAttribute="top" id="WF6-bu-H29"/>
+                            <constraint firstAttribute="trailing" secondItem="lDW-Qj-pge" secondAttribute="trailing" id="yhi-f1-5ie"/>
+                            <constraint firstItem="lDW-Qj-pge" firstAttribute="leading" secondItem="pwO-Gs-Qod" secondAttribute="leading" id="ytB-Xw-W0l"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BGP-Fa-SEs"/>
+                    </view>
+                    <connections>
+                        <outlet property="background" destination="lDW-Qj-pge" id="lNL-yF-Gtc"/>
+                        <outlet property="loginContainer" destination="dtv-ba-nXN" id="nm8-6U-Pux"/>
+                        <outlet property="loginContainerTop" destination="6Sm-xd-dAQ" id="feK-Vz-oh9"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1001" y="430"/>
         </scene>
     </scenes>
 </document>
