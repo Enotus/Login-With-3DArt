@@ -7,15 +7,38 @@
 //
 
 import UIKit
+import QuartzCore
+import SceneKit
 
 class MainViewController: UIViewController {
     
+    //Transition
     let presentLoginTransition = PresentLogin()
+    
+    //SceneKit Properties
+    @IBOutlet weak var scnView: SCNView!
+    var carrotPlayer = SCNAnimationPlayer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // create a new scene
+        let scene = SCNScene(named: "art.scnassets/carrot.scn")!
+        
+        // retrieve the carrot node
+        let carrot = scene.rootNode.childNode(withName: "carrot", recursively: true)!
+        carrotPlayer = carrot.animationPlayer(forKey: "keyframedAnimations2")!
+        
+        // set the scene to the view
+        scnView.scene = scene
+        
+        // set up antialiasing
+        scnView.antialiasingMode = .multisampling2X
+        scnView.isJitteringEnabled = true //the best antialiasing mode for STATIC image
+        
+        // configure the view
+        scnView.backgroundColor = UIColor.clear
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

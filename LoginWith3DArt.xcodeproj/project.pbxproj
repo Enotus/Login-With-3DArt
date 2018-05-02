@@ -15,6 +15,7 @@
 		71D85FBD2099D88900F7B847 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D85FBC2099D88900F7B847 /* LoginViewController.swift */; };
 		71D85FBF2099D8BE00F7B847 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D85FBE2099D8BE00F7B847 /* MainViewController.swift */; };
 		71D85FC12099D8F300F7B847 /* PresentLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D85FC02099D8F300F7B847 /* PresentLogin.swift */; };
+		71D85FC32099EF4200F7B847 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 71D85FC22099EF4200F7B847 /* art.scnassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		71D85FBC2099D88900F7B847 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		71D85FBE2099D8BE00F7B847 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		71D85FC02099D8F300F7B847 /* PresentLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentLogin.swift; sourceTree = "<group>"; };
+		71D85FC22099EF4200F7B847 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				71D85FC02099D8F300F7B847 /* PresentLogin.swift */,
 				71D85FA82099CE2F00F7B847 /* Main.storyboard */,
 				71D85FB62099D49F00F7B847 /* OrangeButton.swift */,
+				71D85FC22099EF4200F7B847 /* art.scnassets */,
 				71D85FAB2099CE3000F7B847 /* Assets.xcassets */,
 				71D85FAD2099CE3000F7B847 /* LaunchScreen.storyboard */,
 				71D85FB02099CE3000F7B847 /* Info.plist */,
@@ -132,6 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71D85FAF2099CE3000F7B847 /* LaunchScreen.storyboard in Resources */,
+				71D85FC32099EF4200F7B847 /* art.scnassets in Resources */,
 				71D85FAC2099CE3000F7B847 /* Assets.xcassets in Resources */,
 				71D85FAA2099CE2F00F7B847 /* Main.storyboard in Resources */,
 			);

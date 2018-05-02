@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,13 +20,46 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="WFR-V5-qas">
-                                <rect key="frame" x="24" y="274.5" width="327" height="118"/>
+                                <rect key="frame" x="24" y="115.5" width="327" height="436.5"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m4y-Qg-sCo">
+                                        <rect key="frame" x="43.5" y="0.0" width="240" height="240"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CarrotBackground" translatesAutoresizingMaskIntoConstraints="NO" id="CFD-5N-max">
+                                                <rect key="frame" x="6" y="6" width="228" height="228"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="228" id="Gls-kc-GHd"/>
+                                                    <constraint firstAttribute="width" constant="228" id="XhN-pd-V3s"/>
+                                                </constraints>
+                                            </imageView>
+                                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" playing="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iZ0-aB-far">
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="iZ0-aB-far" secondAttribute="height" multiplier="1:1" id="vor-cj-gGw"/>
+                                                </constraints>
+                                            </sceneKitView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="CFD-5N-max" firstAttribute="centerX" secondItem="m4y-Qg-sCo" secondAttribute="centerX" id="1sN-k5-UKg"/>
+                                            <constraint firstItem="iZ0-aB-far" firstAttribute="leading" secondItem="m4y-Qg-sCo" secondAttribute="leading" id="EJU-He-I3w"/>
+                                            <constraint firstItem="iZ0-aB-far" firstAttribute="centerY" secondItem="CFD-5N-max" secondAttribute="centerY" id="Fg9-Mr-HzD"/>
+                                            <constraint firstAttribute="width" secondItem="m4y-Qg-sCo" secondAttribute="height" multiplier="1:1" id="KpZ-Vd-woY"/>
+                                            <constraint firstItem="CFD-5N-max" firstAttribute="centerY" secondItem="m4y-Qg-sCo" secondAttribute="centerY" id="Wpx-pz-dmb"/>
+                                            <constraint firstAttribute="trailing" secondItem="iZ0-aB-far" secondAttribute="trailing" id="l0L-v5-o7l"/>
+                                            <constraint firstAttribute="width" constant="240" id="pC4-Lr-Tzo"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carrot Paradise" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0g-4e-4i7">
+                                        <rect key="frame" x="52" y="264" width="223.5" height="38.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Uw-0w-Vhb" customClass="OrangeButton" customModule="LoginWith3DArt" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="327" height="64"/>
+                                        <rect key="frame" x="0.0" y="326.5" width="327" height="56"/>
                                         <color key="backgroundColor" red="1" green="0.56862745100000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="64" id="b7k-HU-zl3"/>
+                                            <constraint firstAttribute="height" constant="56" id="b7k-HU-zl3"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -43,7 +77,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7jo-fR-u0p">
-                                        <rect key="frame" x="148.5" y="88" width="30" height="30"/>
+                                        <rect key="frame" x="148.5" y="406.5" width="30" height="30"/>
                                         <state key="normal" title="Skip"/>
                                     </button>
                                 </subviews>
@@ -62,6 +96,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="scnView" destination="iZ0-aB-far" id="tR0-Z3-rEO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -141,4 +178,7 @@
             <point key="canvasLocation" x="1001" y="430"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="CarrotBackground" width="228" height="228"/>
+    </resources>
 </document>
